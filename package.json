@@ -1,12 +1,15 @@
 {
   "name": "@trash-streamers/common",
   "version": "1.0.0",
-  "description": "Core shared component for Trash-streamers microservice ecosystem ",
+  "description": "Core shared component for Trash-streamers microservice ecosystem",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\""
