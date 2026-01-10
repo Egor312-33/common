@@ -1,1 +1,5 @@
 export * from './all-configs.interface'
+export * from './database.interface'
+export * from './grpc.interface'
+export * from './jwt.interface'
+export * from './redis.interface'
