@@ -1,6 +1,6 @@
 {
   "name": "@trash-streamers/common",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Core shared component for Trash-streamers microservice ecosystem",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

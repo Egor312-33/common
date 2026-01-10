@@ -1,5 +1,5 @@
 export interface JwtConfig {
     secretKey: string
-    accessTtl: number
-    refreshTtl: number
+    accessTtl: string
+    refreshTtl: string
 }

@@ -1,12 +1,12 @@
-import { IsNumber, IsString } from 'class-validator'
+import { IsString } from 'class-validator'
 
 export class JwtValidator {
     @IsString()
     public JWT_SECRET_KEY: string
 
-    @IsNumber()
-    public JWT_ACCESS_TTL: number
+    @IsString()
+    public JWT_ACCESS_TTL: string
 
-    @IsNumber()
-    public JWT_REFRESH_TTL: number
+    @IsString()
+    public JWT_REFRESH_TTL: string
 }
