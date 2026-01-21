@@ -1,4 +1,4 @@
-import { IsInt, IsString } from 'class-validator'
+import { IsInt, IsOptional, IsString } from 'class-validator'
 
 export class GrpcValidator {
     @IsString()
@@ -7,6 +7,11 @@ export class GrpcValidator {
     @IsInt()
     public GRPC_PORT: number
 
+    @IsOptional()
     @IsString()
     public USERS_GRPC_URL: string
+
+    @IsOptional()
+    @IsString()
+    public AUTH_GRPC_URL: string
 }
