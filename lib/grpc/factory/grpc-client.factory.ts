@@ -22,6 +22,8 @@ export class GrpcClientFactory {
           keepCase: false,
           enums: String,
           oneofs: true,
+          defaults: true,
+          longs: String,
         },
       },
     }) as ClientGrpc;
