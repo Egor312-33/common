@@ -21,11 +21,9 @@ export class GrpcClientFactory {
         loader: {
           keepCase: false,
           enums: String,
-          oneofs: true,
           defaults: true,
           longs: String,
           objects: true,
-          json: true,
         },
       },
     }) as ClientGrpc;
