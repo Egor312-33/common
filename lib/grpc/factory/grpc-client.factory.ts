@@ -25,6 +25,7 @@ export class GrpcClientFactory {
           defaults: true,
           longs: String,
           objects: true,
+          json: true,
         },
       },
     }) as ClientGrpc;
