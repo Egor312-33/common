@@ -1,19 +1,24 @@
-import { PROTO_PATHS } from '@trash-streamers/contracts'
+import { PROTO_PATHS } from "@trash-streamers/contracts";
 
 export const GRPC_CLIENTS = {
-    AUTH_PACKAGE: {
-        package: 'auth.v1',
-        protoPath: PROTO_PATHS.AUTH,
-        env: 'AUTH_GRPC_URL'
-    },
-    ACCOUNT_PACKAGE: {
-        package: 'account.v1',
-        protoPath: PROTO_PATHS.ACCOUNT,
-        env: 'AUTH_GRPC_URL'
-    },
-    USERS_PACKAGE: {
-        package: 'users.v1',
-        protoPath: PROTO_PATHS.USERS,
-        env: 'USERS_GRPC_URL'
-    }
-} as const
+  AUTH_PACKAGE: {
+    package: "auth.v1",
+    protoPath: PROTO_PATHS.AUTH,
+    env: "AUTH_GRPC_URL",
+  },
+  ACCOUNT_PACKAGE: {
+    package: "account.v1",
+    protoPath: PROTO_PATHS.ACCOUNT,
+    env: "AUTH_GRPC_URL",
+  },
+  USERS_PACKAGE: {
+    package: "users.v1",
+    protoPath: PROTO_PATHS.USERS,
+    env: "USERS_GRPC_URL",
+  },
+  MEDIA_PACKAGE: {
+    package: "media.v1",
+    protoPath: PROTO_PATHS.MEDIA,
+    env: "MEDIA_GRPC_URL",
+  },
+} as const;
