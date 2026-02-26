@@ -21,4 +21,9 @@ export const GRPC_CLIENTS = {
     protoPath: PROTO_PATHS.MEDIA,
     env: "MEDIA_GRPC_URL",
   },
+  VIDEO_PACKAGE: {
+    package: "video.v1",
+    protoPath: PROTO_PATHS.VIDEO,
+    env: "VIDEO_GRPC_URL",
+  },
 } as const;
