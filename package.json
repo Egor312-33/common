@@ -29,6 +29,6 @@
   "dependencies": {
     "@nestjs/common": "^11.1.12",
     "@nestjs/config": "^4.0.2",
-    "@trash-streamers/contracts": "^1.1.58"
+    "@trash-streamers/contracts": "^1.1.61"
   }
 }
