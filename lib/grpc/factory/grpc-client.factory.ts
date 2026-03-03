@@ -23,7 +23,7 @@ export class GrpcClientFactory {
           enums: String,
           defaults: true,
           longs: String,
-          objects: false,
+          objects: true,
         },
       },
     }) as ClientGrpc;
