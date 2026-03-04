@@ -30,8 +30,8 @@ export function generateFieldMask(object: unknown): string[] {
   return paths;
 }
 
-function unescapeAndSplit(originalPath: string) {
-  const properties = [];
+function unescapeAndSplit(originalPath: string): string[] {
+  const properties: string[] = [];
   let path = originalPath;
   let i = path.indexOf(".");
   while (i >= 0) {
