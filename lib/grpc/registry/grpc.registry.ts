@@ -31,4 +31,9 @@ export const GRPC_CLIENTS = {
     protoPath: PROTO_PATHS.CATEGORY,
     env: "CATEGORY_GRPC_URL",
   },
+  SYSTEM_CHATS_PACKAGE: {
+    package: "system.chats.v1",
+    protoPath: PROTO_PATHS.SYSTEM_CHATS,
+    env: "SYSTEM_CHATS_GRPC_URL"
+  }
 } as const;

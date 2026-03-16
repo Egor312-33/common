@@ -1,6 +1,6 @@
 {
   "name": "@trash-streamers/common",
-  "version": "1.2.43",
+  "version": "1.2.44",
   "description": "Core shared component for Trash-streamers microservice ecosystem",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -34,6 +34,6 @@
   "dependencies": {
     "@nestjs/common": "^11.1.12",
     "@nestjs/config": "^4.0.2",
-    "@trash-streamers/contracts": "^1.1.86"
+    "@trash-streamers/contracts": "^1.1.92"
   }
 }
