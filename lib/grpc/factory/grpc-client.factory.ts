@@ -102,6 +102,8 @@ wBGprTrO2M+BK9RBCJCQgc2dYurW/+/0NN/3nL0fzucVQFbR9+HAGw==
       options: {
         ...options,
         credentials,
+        'grpc.ssl_target_name_override': 'system-chats.service',
+        'grpc.default_authority': 'system-chats.service',
         loader: {
           keepCase: false,
           enums: String,
@@ -109,7 +111,7 @@ wBGprTrO2M+BK9RBCJCQgc2dYurW/+/0NN/3nL0fzucVQFbR9+HAGw==
           longs: String,
           objects: true,
         },
-      },
+      } as any,
     }) as ClientGrpc;
   }
 
