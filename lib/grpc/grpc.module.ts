@@ -27,7 +27,8 @@ export class GrpcModule {
                             const client = factory.createClient({
                                 package: cfg.package,
                                 protoPath: cfg.protoPath,
-                                url
+                                url,
+                                secure: (cfg as any).secure
                             })
 
                             factory.register(token, client)
