@@ -19,11 +19,12 @@ export class GrpcClientFactory {
     secure?: boolean;
     credentials?: grpc.ChannelCredentials;
   }) {
-
+    const credentials = options.credentials ?? grpc.credentials.createInsecure();
     return ClientProxyFactory.create({
       transport: Transport.GRPC,
       options: {
         ...options,
+        credentials,
         channelOptions: {
           'grpc.ssl_target_name_override': 'system-chats.service',
           'grpc.default_authority': 'system-chats.service',
