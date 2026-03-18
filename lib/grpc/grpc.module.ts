@@ -18,13 +18,13 @@ export class GrpcModule {
 
                     return {
                         provide: `${GRPC_CLIENT_PREFIX}_${token}`,
-                        useFactory: (
+                        useFactory: async (
                             factory: GrpcClientFactory,
                             config: ConfigService
                         ) => {
                             const url = config.getOrThrow(cfg.env)
 
-                            const client = factory.createClient({
+                            const client = await factory.createClient({
                                 package: cfg.package,
                                 protoPath: cfg.protoPath,
                                 url,
