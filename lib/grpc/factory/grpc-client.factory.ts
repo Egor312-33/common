@@ -1,4 +1,6 @@
+import * as grpc from "@grpc/grpc-js";
 import { Injectable } from "@nestjs/common";
+import type { ConfigService } from "@nestjs/config";
 import {
   ClientGrpc,
   ClientProxyFactory,
@@ -7,17 +9,30 @@ import {
 
 @Injectable()
 export class GrpcClientFactory {
+  constructor(private readonly config: ConfigService) { }
   private clients = new Map<string, ClientGrpc>();
 
   public createClient(options: {
     package: string;
     protoPath: string;
     url: string;
+    secure?: boolean;
   }) {
+    let credentials = grpc.credentials.createInsecure();
+
+    if (options.secure) {
+
+      const ca = Buffer.from(this.config.getOrThrow('GRPC_SYSTEM_CHATS_CA_CERT'), 'base64');
+      const cert = Buffer.from(this.config.getOrThrow('GRPC_SYSTEM_CHATS_CLIENT_CERT'), 'base64');
+      const key = Buffer.from(this.config.getOrThrow('GRPC_SYSTEM_CHATS_CLIENT_KEY'), 'base64');
+
+      credentials = grpc.credentials.createSsl(ca, key, cert);
+    }
     return ClientProxyFactory.create({
       transport: Transport.GRPC,
       options: {
         ...options,
+        credentials,
         loader: {
           keepCase: false,
           enums: String,
