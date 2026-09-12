@@ -36,5 +36,10 @@ export const GRPC_CLIENTS = {
     protoPath: PROTO_PATHS.SYSTEM_CHATS,
     env: "SYSTEM_CHATS_GRPC_URL",
     secure: true
+  },
+  ENGAGEMENT_PACKAGE: {
+    package: "engagement.v1",
+    protoPath: PROTO_PATHS.ENGAGEMENT,
+    env: "ENGAGEMENT_GRPC_URL"
   }
 } as const;

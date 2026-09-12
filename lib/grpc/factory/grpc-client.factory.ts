@@ -9,7 +9,7 @@ import {
 
 @Injectable()
 export class GrpcClientFactory {
-  constructor(private readonly config: ConfigService) { }
+  constructor(private readonly config: ConfigService) {}
   private clients = new Map<string, ClientGrpc>();
 
   public async createClient(options: {
@@ -19,15 +19,16 @@ export class GrpcClientFactory {
     secure?: boolean;
     credentials?: grpc.ChannelCredentials;
   }) {
-    const credentials = options.credentials ?? grpc.credentials.createInsecure();
+    const credentials =
+      options.credentials ?? grpc.credentials.createInsecure();
     return ClientProxyFactory.create({
       transport: Transport.GRPC,
       options: {
         ...options,
         credentials,
         channelOptions: {
-          'grpc.ssl_target_name_override': 'system-chats.service',
-          'grpc.default_authority': 'system-chats.service',
+          "grpc.ssl_target_name_override": "system-chats.service",
+          "grpc.default_authority": "system-chats.service",
         },
         loader: {
           keepCase: false,
