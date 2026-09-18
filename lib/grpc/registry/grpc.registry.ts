@@ -41,5 +41,11 @@ export const GRPC_CLIENTS = {
     package: "engagement.v1",
     protoPath: PROTO_PATHS.ENGAGEMENT,
     env: "ENGAGEMENT_GRPC_URL"
+  },
+  // comments-service (Bun + NestJS): gRPC :50058
+  COMMENTS_PACKAGE: {
+    package: "comments.v1",
+    protoPath: PROTO_PATHS.COMMENTS,
+    env: "COMMENTS_GRPC_URL"
   }
 } as const;
